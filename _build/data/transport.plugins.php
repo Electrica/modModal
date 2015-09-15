@@ -2,15 +2,14 @@
 
 $plugins = array();
 
-$tmp = array(/*
+$tmp = array(
 	'modModal' => array(
 		'file' => 'modmodal',
 		'description' => '',
 		'events' => array(
-			'OnManagerPageInit' => array()
+			'OnWebPageInit' => array()
 		)
 	)
-	*/
 );
 
 foreach ($tmp as $k => $v) {

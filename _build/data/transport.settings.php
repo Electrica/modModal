@@ -2,13 +2,22 @@
 
 $settings = array();
 
-$tmp = array(/*
-	'some_setting' => array(
-		'xtype' => 'combo-boolean',
-		'value' => true,
+$tmp = array(
+	'id' => array(
+		'xtype' => 'textfield',
+		'value' => '',
 		'area' => 'modmodal_main',
 	),
-	*/
+	'chunk' => array(
+		'xtype' => 'textfield',
+		'value' => '',
+		'area' => 'modmodal_main'
+	),
+	'active' => array(
+		'xtype' => 'combo-boolean',
+		'value' => false,
+		'area' => 'modmodal_main'
+	)
 );
 
 foreach ($tmp as $k => $v) {

@@ -2,5 +2,8 @@
 
 $_lang['area_modmodal_main'] = 'Основные';
 
-$_lang['setting_modmodal_some_setting'] = 'Какая-то настройка';
-$_lang['setting_modmodal_some_setting_desc'] = 'Это описание для какой-то настройки';
+$_lang['setting_modmodal_id'] = 'id страниц';
+$_lang['setting_modmodal_id_desc'] = 'Можно указать id страниц где нужно показывать модальное окно';
+
+$_lang['setting_modmodal_chunk'] = 'Чанк модального окна';
+$_lang['setting_modmodal_chunk_desc'] = 'HTML разметка модального окна';

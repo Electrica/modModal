@@ -3,10 +3,10 @@
 $chunks = array();
 
 $tmp = array(
-	'tpl.modModal.item' => array(
-		'file' => 'item',
-		'description' => '',
-	),
+	'tpl.modmodal' => array(
+		'file' => 'modmodal',
+		'description' => 'Чанк для показа модального окна.'
+	)
 );
 
 // Save chunks for setup options
