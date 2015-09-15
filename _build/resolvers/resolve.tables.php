@@ -7,12 +7,12 @@ if ($object->xpdo) {
     switch ($options[xPDOTransport::PACKAGE_ACTION]) {
         case xPDOTransport::ACTION_INSTALL:
         case xPDOTransport::ACTION_UPGRADE:
-            $modelPath = $modx->getOption('modextra_core_path', null, $modx->getOption('core_path') . 'components/modextra/') . 'model/';
-            $modx->addPackage('modextra', $modelPath);
+            $modelPath = $modx->getOption('modmodal_core_path', null, $modx->getOption('core_path') . 'components/modmodal/') . 'model/';
+            $modx->addPackage('modmodal', $modelPath);
 
             $manager = $modx->getManager();
             $objects = array();
-            $schemaFile = MODX_CORE_PATH . 'components/modextra/model/schema/modextra.mysql.schema.xml';
+            $schemaFile = MODX_CORE_PATH . 'components/modmodal/model/schema/modmodal.mysql.schema.xml';
             if (is_file($schemaFile)) {
                 $schema = new SimpleXMLElement($schemaFile, 0, true);
                 if (isset($schema->object)) {
@@ -73,12 +73,12 @@ if ($object->xpdo) {
         case xPDOTransport::ACTION_UNINSTALL:
             // Remove tables if it's need
             /*
-            $modelPath = $modx->getOption('modextra_core_path', null, $modx->getOption('core_path') . 'components/modextra/') . 'model/';
-            $modx->addPackage('modextra', $modelPath);
+            $modelPath = $modx->getOption('modmodal_core_path', null, $modx->getOption('core_path') . 'components/modmodal/') . 'model/';
+            $modx->addPackage('modmodal', $modelPath);
 
             $manager = $modx->getManager();
             $objects = array();
-            $schemaFile = MODX_CORE_PATH . 'components/modextra/model/schema/modextra.mysql.schema.xml';
+            $schemaFile = MODX_CORE_PATH . 'components/modmodal/model/schema/modmodal.mysql.schema.xml';
             if (is_file($schemaFile)) {
                 $schema = new SimpleXMLElement($schemaFile, 0, true);
                 if (isset($schema->object)) {

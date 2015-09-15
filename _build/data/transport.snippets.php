@@ -3,8 +3,8 @@
 $snippets = array();
 
 $tmp = array(
-	'modExtra' => array(
-		'file' => 'modextra',
+	'modModal' => array(
+		'file' => 'modmodal',
 		'description' => '',
 	),
 );
