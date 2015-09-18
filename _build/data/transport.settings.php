@@ -10,7 +10,7 @@ $tmp = array(
 	),
 	'chunk' => array(
 		'xtype' => 'textfield',
-		'value' => 'tpl.modmodal',
+		'value' => 'tpl.modal',
 		'area' => 'modmodal_main'
 	),
 	'active' => array(

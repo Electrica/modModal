@@ -4,7 +4,7 @@ $chunks = array();
 
 $tmp = array(
 	'tpl.modmodal' => array(
-		'file' => 'modmodal',
+		'file' => 'modal',
 		'description' => 'Чанк для показа модального окна.'
 	)
 );
