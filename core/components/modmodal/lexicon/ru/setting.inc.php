@@ -7,3 +7,6 @@ $_lang['setting_modmodal_id_desc'] = 'Можно указать id страни�
 
 $_lang['setting_modmodal_chunk'] = 'Чанк модального окна';
 $_lang['setting_modmodal_chunk_desc'] = 'HTML разметка модального окна';
+
+$_lang['setting_modmodal_include_jquery'] = 'Подключить jquery';
+$_lang['setting_modmodal_include_jquery_desc'] = 'Если на сайте уже подключен jquery поставьте "Нет"';

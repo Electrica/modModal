@@ -17,6 +17,11 @@ $tmp = array(
 		'xtype' => 'combo-boolean',
 		'value' => false,
 		'area' => 'modmodal_main'
+	),
+	'include_jquery' => array(
+		'xtype' => 'combo-boolean',
+		'value' => false,
+		'area' => 'modmodal_main'
 	)
 );
 
