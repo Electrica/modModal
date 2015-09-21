@@ -14,7 +14,6 @@ if($event == 'OnWebPageInit' || $event == 'OnWebPagePrerender'){
             }
 
 
-
             $modx->regClientCSS($modx->getOption('assets_url') . 'components/modmodal/css/web/jquery.arcticmodal-0.3.css');
             $modx->regClientCSS($modx->getOption('modmodal_themes'));
             $modx->regClientScript($modx->getOption('assets_url') . 'components/modmodal/js/web/jquery.arcticmodal-0.3.min.js');
@@ -24,6 +23,9 @@ if($event == 'OnWebPageInit' || $event == 'OnWebPagePrerender'){
             $modx->regClientHTMLBlock('<script>' . $main_js . '</script>');
 
             $html = $modx->getChunk($modx->getOption('modmodal_chunk'));
+
+            $modx->parser->processElementTags('', $html, true, false, '[[', ']]', array(), 10);
+            $modx->parser->processElementTags('', $html, true, true, '[[', ']]', array(), 10);
 
             if(strpos($modx->resource->_output, '</body>') !== false){
                 $modx->resource->_output = preg_replace("/(<\/body>)/i", $html . "\n\\1", $modx->resource->_output, true);
