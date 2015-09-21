@@ -22,6 +22,16 @@ $tmp = array(
 		'xtype' => 'combo-boolean',
 		'value' => false,
 		'area' => 'modmodal_main'
+	),
+	'themes' => array(
+		'xtype' => 'textfield',
+		'value' => '{assets_url}components/modmodal/css/web/themes/simple.css',
+		'area' => 'modmodal_main'
+	),
+	'delay' => array(
+		'xtype' => 'textfield',
+		'value' => '',
+		'area' => 'modmodal_main'
 	)
 );
 

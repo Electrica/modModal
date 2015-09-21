@@ -1,10 +1,10 @@
 --------------------
 modModal
 --------------------
-Author: John Doe <john@doe.com>
+Author: Electrica <electricaev@gmail.com>
 --------------------
 
-A basic Extra for MODx Revolution.
+Компонент для создания модальных окон на страницах сайта с кастомным оформлением
 
-Feel free to suggest ideas/improvements/bugs on GitHub:
-http://github.com/username/modModal/issues
+Для идей/багов на GitHub:
+https://github.com/Electrica/modModal/issues
