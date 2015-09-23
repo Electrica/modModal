@@ -1,13 +1,17 @@
 <?php
-$xpdo_meta_map['modModalItem']= array (
+$xpdo_meta_map['modModal']= array (
   'package' => 'modmodal',
   'version' => '1.1',
-  'table' => 'modmodal_items',
+  'table' => 'modmodal_modal',
   'extends' => 'xPDOSimpleObject',
   'fields' => 
   array (
     'name' => '',
     'description' => '',
+    'chunk' => '',
+    'time_delay' => '',
+    'time_start' => '',
+    'time_stop' => '',
     'active' => 1,
   ),
   'fieldMeta' => 
@@ -24,6 +28,38 @@ $xpdo_meta_map['modModalItem']= array (
     array (
       'dbtype' => 'text',
       'phptype' => 'text',
+      'null' => true,
+      'default' => '',
+    ),
+    'chunk' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '100',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => '',
+    ),
+    'time_delay' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '100',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => '',
+    ),
+    'time_start' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '100',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => '',
+    ),
+    'time_stop' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '100',
+      'phptype' => 'string',
       'null' => true,
       'default' => '',
     ),

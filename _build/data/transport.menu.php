@@ -3,12 +3,12 @@
 $menus = array();
 
 $tmp = array(
-//	'modmodal' => array(
-//		'description' => 'modmodal_menu_desc',
-//		'action' => array(
-//			'controller' => 'index',
-//		),
-//	),
+	'modmodal' => array(
+		'description' => 'modmodal_menu_desc',
+		'action' => array(
+			'controller' => 'index',
+		),
+	),
 );
 
 $i = 0;
