@@ -3,15 +3,10 @@
 $settings = array();
 
 $tmp = array(
-	'id' => array(
+	'id_json' => array(
 		'xtype' => 'textfield',
-		'value' => '',
+		'value' => '[{"id":1,"chunk":"tpl.modmodal","delay":2000,"time":60}]',
 		'area' => 'modmodal_main',
-	),
-	'chunk' => array(
-		'xtype' => 'textfield',
-		'value' => 'tpl.modmodal',
-		'area' => 'modmodal_main'
 	),
 	'active' => array(
 		'xtype' => 'combo-boolean',
@@ -26,11 +21,6 @@ $tmp = array(
 	'themes' => array(
 		'xtype' => 'textfield',
 		'value' => '{assets_url}components/modmodal/css/web/themes/simple.css',
-		'area' => 'modmodal_main'
-	),
-	'delay' => array(
-		'xtype' => 'textfield',
-		'value' => '',
 		'area' => 'modmodal_main'
 	)
 );

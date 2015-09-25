@@ -7,7 +7,8 @@ $tmp = array(
 		'file' => 'modmodal',
 		'description' => '',
 		'events' => array(
-			'OnWebPageRender' => array()
+			'OnWebPageInit' => array(),
+			'OnWebPagePrerender' => array()
 		)
 	)
 );
