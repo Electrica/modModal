@@ -3,8 +3,8 @@
 $plugins = array();
 
 $tmp = array(
-	'modModal' => array(
-		'file' => 'modmodal',
+	'simplemodal' => array(
+		'file' => 'simplemodal',
 		'description' => '',
 		'events' => array(
 			'OnWebPageInit' => array(),

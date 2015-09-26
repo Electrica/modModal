@@ -3,8 +3,8 @@
 $menus = array();
 
 $tmp = array(
-//	'modmodal' => array(
-//		'description' => 'modmodal_menu_desc',
+//	'simplemodal' => array(
+//		'description' => 'simplemodal_menu_desc',
 //		'action' => array(
 //			'controller' => 'index',
 //		),
