@@ -2,7 +2,8 @@ simplemodal.page.Home = function (config) {
 	config = config || {};
 	Ext.applyIf(config, {
 		components: [{
-			xtype: 'simplemodal-panel-home', renderTo: 'simplemodal-panel-home-div'
+			xtype: 'simplemodal-panel-home',
+			renderTo: 'simplemodal-panel-home-div'
 		}]
 	});
 	simplemodal.page.Home.superclass.constructor.call(this, config);

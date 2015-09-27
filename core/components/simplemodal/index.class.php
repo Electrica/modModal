@@ -16,14 +16,15 @@ abstract class simplemodalMainController extends modExtraManagerController {
 		require_once $corePath . 'model/simplemodal/simplemodal.class.php';
 
 		$this->simplemodal = new simplemodal($this->modx);
-		//$this->addCss($this->simplemodal->config['cssUrl'] . 'mgr/main.css');
-		$this->addJavascript($this->simplemodal->config['jsUrl'] . 'mgr/simplemodal.js');
-		$this->addHtml('
-		<script type="text/javascript">
+
+		$this->modx->regClientCSS($this->simplemodal->config['cssUrl'] . 'mgr/main.css');
+		$this->modx->regClientStartupScript($this->simplemodal->config['jsUrl'] . 'mgr/simplemodal.js');
+		$this->modx->regClientStartupHTMLBlock('<script type="text/javascript">
+		Ext.onReady(function() {
 			simplemodal.config = ' . $this->modx->toJSON($this->simplemodal->config) . ';
 			simplemodal.config.connector_url = "' . $this->simplemodal->config['connectorUrl'] . '";
-		</script>
-		');
+		});
+		</script>');
 
 		parent::initialize();
 	}
