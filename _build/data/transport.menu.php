@@ -3,12 +3,12 @@
 $menus = array();
 
 $tmp = array(
-//	'simplemodal' => array(
-//		'description' => 'simplemodal_menu_desc',
-//		'action' => array(
-//			'controller' => 'index',
-//		),
-//	),
+	'simplemodal' => array(
+		'description' => 'simplemodal_menu_desc',
+		'action' => array(
+			'controller' => 'index',
+		),
+	),
 );
 
 $i = 0;

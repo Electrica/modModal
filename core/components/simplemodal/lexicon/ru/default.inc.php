@@ -2,7 +2,7 @@
 include_once 'setting.inc.php';
 
 $_lang['simplemodal'] = 'simplemodal';
-$_lang['simplemodal_menu_desc'] = 'Пример расширения для разработки.';
+$_lang['simplemodal_menu_desc'] = 'Управление модальными окнами';
 $_lang['simplemodal_intro_msg'] = 'Вы можете выделять сразу несколько предметов при помощи Shift или Ctrl.';
 
 $_lang['simplemodal_items'] = 'Предметы';
