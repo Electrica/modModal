@@ -31,6 +31,7 @@ class simpleModalHomeManagerController extends simpleModalMainController {
 		$this->addCss($this->simpleModal->config['cssUrl'] . 'mgr/main.css');
 		$this->addCss($this->simpleModal->config['cssUrl'] . 'mgr/bootstrap.buttons.css');
 		$this->addJavascript($this->simpleModal->config['jsUrl'] . 'mgr/misc/utils.js');
+        $this->addJavascript($this->simpleModal->config['jsUrl'] . 'mgr/misc/simplemodal.combo.js');
 		$this->addJavascript($this->simpleModal->config['jsUrl'] . 'mgr/widgets/items.grid.js');
 		$this->addJavascript($this->simpleModal->config['jsUrl'] . 'mgr/widgets/items.windows.js');
 		$this->addJavascript($this->simpleModal->config['jsUrl'] . 'mgr/widgets/home.panel.js');

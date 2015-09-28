@@ -13,7 +13,12 @@ $_lang['simplemodal_item_time_delay'] = 'Время задержки';
 $_lang['simplemodal_item_time_start'] = 'Время начала показов';
 $_lang['simplemodal_item_time_stop'] = 'Время окончания показов';
 $_lang['simplemodal_item_chunk'] = 'Чанк модального окна';
+$_lang['simplemodal_item_user'] = 'Выберите пользователя';
+$_lang['simplemodal_item_usergroup'] = 'Выберите группу ';
+$_lang['simplemodal_item_resource'] = 'id ресурса.';
 $_lang['simplemodal_item_active'] = 'Активно';
+
+$_lang['simplemodal_combo_select'] = 'Выберите из списка.';
 
 $_lang['simplemodal_item_create'] = 'Создать модальное окно';
 $_lang['simplemodal_item_update'] = 'Изменить Предмет';

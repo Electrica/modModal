@@ -36,24 +36,100 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
 			height: 150,
 			anchor: '99%'
 		},{
-            xtype: 'xdatetime',
-            fieldLabel: _('simplemodal_item_time_start'),
-            name: 'time_start',
-            id: config.id + '-time_start',
-            anchor: '99%'
+            layout:'column'
+            ,border: false
+            ,anchor: '100%',
+            items: [{
+                columnWidth: .5
+                ,layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    xtype: 'xdatetime',
+                    fieldLabel: _('simplemodal_item_time_start'),
+                    name: 'time_start',
+                    id: config.id + '-time_start',
+                    anchor: '99%'
+                }]
+            },{
+                columnWidth: .5
+                ,layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    xtype: 'xdatetime',
+                    fieldLabel: _('simplemodal_item_time_stop'),
+                    name: 'time_stop',
+                    id: config.id + '-time_stop',
+                    anchor: '99%'
+                }]
+            }]
         },{
-            xtype: 'xdatetime',
-            fieldLabel: _('simplemodal_item_time_stop'),
-            name: 'time_stop',
-            id: config.id + '-time_stop',
-            anchor: '99%'
+            layout:'column'
+            ,border: false
+            ,anchor: '100%',
+            items: [{
+                columnWidth: .5
+                ,layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    xtype: 'simplemodal-combo-chunk',
+                    fieldLabel: _('simplemodal_item_chunk'),
+                    name: 'chunk',
+                    id: config.id + '-chunk',
+                    anchor: '99%',
+                    allowBlank: false
+                }]
+            },{
+                columnWidth: .5
+                ,layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    xtype: 'simplemodal-combo-resource',
+                    fieldLabel: _('simplemodal_item_resource'),
+                    name: 'id_resource',
+                    id: config.id + '-id_resource',
+                    anchor: '99%',
+                    allowBlank: false
+                }]
+            }]
         },{
-            xtype: 'textfield',
-            fieldLabel: _('simplemodal_item_chunk'),
-            name: 'chunk',
-            id: config.id + '-chunk',
-            anchor: '99%',
-            allowBlank: false,
+            layout:'column'
+            ,border: false
+            ,anchor: '100%',
+            items: [{
+                columnWidth: .5,
+                layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    xtype: 'modx-combo-user',
+                    fieldLabel: _('simplemodal_item_user'),
+                    name: 'id_user',
+                    id: config.id + '-id_user',
+                    anchor: '99%'
+                }]
+            },{
+                columnWidth: .5
+                ,layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    columnWidth: .5
+                    ,layout: 'form'
+                    ,defaults: { msgTarget: 'under' }
+                    ,border:false,
+                    items: [{
+                        xtype: 'modx-combo-usergroup',
+                        fieldLabel: _('simplemodal_item_usergroup'),
+                        name: 'id_group',
+                        id: config.id + '-id_group',
+                        anchor: '99%'
+                    }]
+                }]
+            }]
         }, {
 			xtype: 'xcheckbox',
 			boxLabel: _('simplemodal_item_active'),
