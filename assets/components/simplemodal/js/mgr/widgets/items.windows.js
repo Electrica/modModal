@@ -35,7 +35,26 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
 			id: config.id + '-description',
 			height: 150,
 			anchor: '99%'
-		}, {
+		},{
+            xtype: 'xdatetime',
+            fieldLabel: _('simplemodal_item_time_start'),
+            name: 'time_start',
+            id: config.id + '-time_start',
+            anchor: '99%'
+        },{
+            xtype: 'xdatetime',
+            fieldLabel: _('simplemodal_item_time_stop'),
+            name: 'time_stop',
+            id: config.id + '-time_stop',
+            anchor: '99%'
+        },{
+            xtype: 'textfield',
+            fieldLabel: _('simplemodal_item_chunk'),
+            name: 'chunk',
+            id: config.id + '-chunk',
+            anchor: '99%',
+            allowBlank: false,
+        }, {
 			xtype: 'xcheckbox',
 			boxLabel: _('simplemodal_item_active'),
 			name: 'active',
