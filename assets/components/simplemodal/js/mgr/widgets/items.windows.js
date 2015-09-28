@@ -1,4 +1,4 @@
-simplemodal.window.CreateItem = function (config) {
+simpleModal.window.CreateItem = function (config) {
 	config = config || {};
 	if (!config.id) {
 		config.id = 'simplemodal-item-window-create';
@@ -7,7 +7,7 @@ simplemodal.window.CreateItem = function (config) {
 		title: _('simplemodal_item_create'),
 		width: 550,
 		autoHeight: true,
-		url: simplemodal.config.connector_url,
+		url: simpleModal.config.connector_url,
 		action: 'mgr/item/create',
 		fields: this.getFields(config),
 		keys: [{
@@ -16,9 +16,9 @@ simplemodal.window.CreateItem = function (config) {
 			}, scope: this
 		}]
 	});
-	simplemodal.window.CreateItem.superclass.constructor.call(this, config);
+	simpleModal.window.CreateItem.superclass.constructor.call(this, config);
 };
-Ext.extend(simplemodal.window.CreateItem, MODx.Window, {
+Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
 
 	getFields: function (config) {
 		return [{
@@ -45,10 +45,10 @@ Ext.extend(simplemodal.window.CreateItem, MODx.Window, {
 	}
 
 });
-Ext.reg('simplemodal-item-window-create', simplemodal.window.CreateItem);
+Ext.reg('simplemodal-item-window-create', simpleModal.window.CreateItem);
 
 
-simplemodal.window.UpdateItem = function (config) {
+simpleModal.window.UpdateItem = function (config) {
 	config = config || {};
 	if (!config.id) {
 		config.id = 'simplemodal-item-window-update';
@@ -57,7 +57,7 @@ simplemodal.window.UpdateItem = function (config) {
 		title: _('simplemodal_item_update'),
 		width: 550,
 		autoHeight: true,
-		url: simplemodal.config.connector_url,
+		url: simpleModal.config.connector_url,
 		action: 'mgr/item/update',
 		fields: this.getFields(config),
 		keys: [{
@@ -66,9 +66,9 @@ simplemodal.window.UpdateItem = function (config) {
 			}, scope: this
 		}]
 	});
-	simplemodal.window.UpdateItem.superclass.constructor.call(this, config);
+	simpleModal.window.UpdateItem.superclass.constructor.call(this, config);
 };
-Ext.extend(simplemodal.window.UpdateItem, MODx.Window, {
+Ext.extend(simpleModal.window.UpdateItem, MODx.Window, {
 
 	getFields: function (config) {
 		return [{
@@ -98,4 +98,4 @@ Ext.extend(simplemodal.window.UpdateItem, MODx.Window, {
 	}
 
 });
-Ext.reg('simplemodal-item-window-update', simplemodal.window.UpdateItem);
+Ext.reg('simplemodal-item-window-update', simpleModal.window.UpdateItem);

@@ -1,11 +1,11 @@
-simplemodal.utils.renderBoolean = function (value, props, row) {
+simpleModal.utils.renderBoolean = function (value, props, row) {
 
 	return value
 		? String.format('<span class="green">{0}</span>', _('yes'))
 		: String.format('<span class="red">{0}</span>', _('no'));
 }
 
-simplemodal.utils.getMenu = function (actions, grid, selected) {
+simpleModal.utils.getMenu = function (actions, grid, selected) {
 	var menu = [];
 	var cls, icon, title, action = '';
 
@@ -52,7 +52,7 @@ simplemodal.utils.getMenu = function (actions, grid, selected) {
 };
 
 
-simplemodal.utils.renderActions = function (value, props, row) {
+simpleModal.utils.renderActions = function (value, props, row) {
 	var res = [];
 	var cls, icon, title, action, item = '';
 	for (var i in row.data.actions) {

@@ -1,12 +1,12 @@
 <?php
 
 /**
- * The home manager controller for simplemodal.
+ * The home manager controller for simpleModal.
  *
  */
-class simplemodalHomeManagerController extends simplemodalMainController {
-	/* @var simplemodal $simplemodal */
-	public $simplemodal;
+class simpleModalHomeManagerController extends simpleModalMainController {
+	/* @var simpleModal $simpleModal */
+	public $simpleModal;
 
 
 	/**
@@ -28,13 +28,13 @@ class simplemodalHomeManagerController extends simplemodalMainController {
 	 * @return void
 	 */
 	public function loadCustomCssJs() {
-		$this->addCss($this->simplemodal->config['cssUrl'] . 'mgr/main.css');
-		$this->addCss($this->simplemodal->config['cssUrl'] . 'mgr/bootstrap.buttons.css');
-		$this->addJavascript($this->simplemodal->config['jsUrl'] . 'mgr/misc/utils.js');
-		$this->addJavascript($this->simplemodal->config['jsUrl'] . 'mgr/widgets/items.grid.js');
-		$this->addJavascript($this->simplemodal->config['jsUrl'] . 'mgr/widgets/items.windows.js');
-		$this->addJavascript($this->simplemodal->config['jsUrl'] . 'mgr/widgets/home.panel.js');
-		$this->addJavascript($this->simplemodal->config['jsUrl'] . 'mgr/sections/home.js');
+		$this->addCss($this->simpleModal->config['cssUrl'] . 'mgr/main.css');
+		$this->addCss($this->simpleModal->config['cssUrl'] . 'mgr/bootstrap.buttons.css');
+		$this->addJavascript($this->simpleModal->config['jsUrl'] . 'mgr/misc/utils.js');
+		$this->addJavascript($this->simpleModal->config['jsUrl'] . 'mgr/widgets/items.grid.js');
+		$this->addJavascript($this->simpleModal->config['jsUrl'] . 'mgr/widgets/items.windows.js');
+		$this->addJavascript($this->simpleModal->config['jsUrl'] . 'mgr/widgets/home.panel.js');
+		$this->addJavascript($this->simpleModal->config['jsUrl'] . 'mgr/sections/home.js');
 		$this->addHtml('<script type="text/javascript">
 		Ext.onReady(function() {
 			MODx.load({ xtype: "simplemodal-page-home"});
@@ -47,6 +47,6 @@ class simplemodalHomeManagerController extends simplemodalMainController {
 	 * @return string
 	 */
 	public function getTemplateFile() {
-		return $this->simplemodal->config['templatesPath'] . 'home.tpl';
+		return $this->simpleModal->config['templatesPath'] . 'home.tpl';
 	}
 }

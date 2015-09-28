@@ -1,18 +1,18 @@
 <?php
 include_once 'setting.inc.php';
 
-$_lang['simplemodal'] = 'simplemodal';
-$_lang['simplemodal_menu_desc'] = 'Управление модальными окнами';
+$_lang['simplemodal'] = 'simpleModal';
+$_lang['simplemodal_menu_desc'] = 'Пример расширения для разработки.';
 $_lang['simplemodal_intro_msg'] = 'Вы можете выделять сразу несколько предметов при помощи Shift или Ctrl.';
 
-$_lang['simplemodal_items'] = 'Модальные окна';
+$_lang['simplemodal_items'] = 'Предметы';
 $_lang['simplemodal_item_id'] = 'Id';
 $_lang['simplemodal_item_name'] = 'Название';
 $_lang['simplemodal_item_description'] = 'Описание';
 $_lang['simplemodal_item_active'] = 'Активно';
 
-$_lang['simplemodal_item_create'] = 'Создать модальное окно';
-$_lang['simplemodal_item_update'] = 'Изменить модальное окно';
+$_lang['simplemodal_item_create'] = 'Создать предмет';
+$_lang['simplemodal_item_update'] = 'Изменить Предмет';
 $_lang['simplemodal_item_enable'] = 'Включить Предмет';
 $_lang['simplemodal_items_enable'] = 'Включить Предметы';
 $_lang['simplemodal_item_disable'] = 'Отключить Предмет';

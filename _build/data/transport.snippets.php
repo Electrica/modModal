@@ -2,11 +2,11 @@
 
 $snippets = array();
 
-$tmp = array(
-//	'simplemodal' => array(
-//		'file' => 'simplemodal',
-//		'description' => '',
-//	),
+$tmp = array(/*
+	'simpleModal' => array(
+		'file' => 'simplemodal',
+		'description' => '',
+	),*/
 );
 
 foreach ($tmp as $k => $v) {

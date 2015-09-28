@@ -3,9 +3,9 @@
 /**
  * Create an Item
  */
-class simplemodalItemCreateProcessor extends modObjectCreateProcessor {
-	public $objectType = 'simplemodalItem';
-	public $classKey = 'simplemodalItem';
+class simpleModalItemCreateProcessor extends modObjectCreateProcessor {
+	public $objectType = 'simpleModalItem';
+	public $classKey = 'simpleModalItem';
 	public $languageTopics = array('simplemodal');
 	//public $permission = 'create';
 
@@ -27,4 +27,4 @@ class simplemodalItemCreateProcessor extends modObjectCreateProcessor {
 
 }
 
-return 'simplemodalItemCreateProcessor';
+return 'simpleModalItemCreateProcessor';

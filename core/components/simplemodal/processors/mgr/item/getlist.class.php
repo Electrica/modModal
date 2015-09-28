@@ -3,9 +3,9 @@
 /**
  * Get a list of Items
  */
-class simplemodalItemGetListProcessor extends modObjectGetListProcessor {
-	public $objectType = 'simplemodalItem';
-	public $classKey = 'simplemodalItem';
+class simpleModalItemGetListProcessor extends modObjectGetListProcessor {
+	public $objectType = 'simpleModalItem';
+	public $classKey = 'simpleModalItem';
 	public $defaultSortField = 'id';
 	public $defaultSortDirection = 'DESC';
 	//public $permission = 'list';
@@ -103,4 +103,4 @@ class simplemodalItemGetListProcessor extends modObjectGetListProcessor {
 
 }
 
-return 'simplemodalItemGetListProcessor';
+return 'simpleModalItemGetListProcessor';

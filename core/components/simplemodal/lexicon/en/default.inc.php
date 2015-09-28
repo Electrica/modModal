@@ -1,7 +1,7 @@
 <?php
 include_once 'setting.inc.php';
 
-$_lang['simplemodal'] = 'simplemodal';
+$_lang['simplemodal'] = 'simpleModal';
 $_lang['simplemodal_menu_desc'] = 'A sample Extra to develop from.';
 $_lang['simplemodal_intro_msg'] = 'You can select multiple items by holding Shift or Ctrl button.';
 

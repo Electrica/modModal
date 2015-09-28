@@ -3,9 +3,9 @@
 /**
  * Remove an Items
  */
-class simplemodalItemRemoveProcessor extends modObjectProcessor {
-	public $objectType = 'simplemodalItem';
-	public $classKey = 'simplemodalItem';
+class simpleModalItemRemoveProcessor extends modObjectProcessor {
+	public $objectType = 'simpleModalItem';
+	public $classKey = 'simpleModalItem';
 	public $languageTopics = array('simplemodal');
 	//public $permission = 'remove';
 
@@ -24,7 +24,7 @@ class simplemodalItemRemoveProcessor extends modObjectProcessor {
 		}
 
 		foreach ($ids as $id) {
-			/** @var simplemodalItem $object */
+			/** @var simpleModalItem $object */
 			if (!$object = $this->modx->getObject($this->classKey, $id)) {
 				return $this->failure($this->modx->lexicon('simplemodal_item_err_nf'));
 			}
@@ -37,4 +37,4 @@ class simplemodalItemRemoveProcessor extends modObjectProcessor {
 
 }
 
-return 'simplemodalItemRemoveProcessor';
+return 'simpleModalItemRemoveProcessor';

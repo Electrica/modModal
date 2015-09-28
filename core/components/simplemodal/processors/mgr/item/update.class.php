@@ -3,9 +3,9 @@
 /**
  * Update an Item
  */
-class simplemodalItemUpdateProcessor extends modObjectUpdateProcessor {
-	public $objectType = 'simplemodalItem';
-	public $classKey = 'simplemodalItem';
+class simpleModalItemUpdateProcessor extends modObjectUpdateProcessor {
+	public $objectType = 'simpleModalItem';
+	public $classKey = 'simpleModalItem';
 	public $languageTopics = array('simplemodal');
 	//public $permission = 'save';
 
@@ -46,4 +46,4 @@ class simplemodalItemUpdateProcessor extends modObjectUpdateProcessor {
 	}
 }
 
-return 'simplemodalItemUpdateProcessor';
+return 'simpleModalItemUpdateProcessor';

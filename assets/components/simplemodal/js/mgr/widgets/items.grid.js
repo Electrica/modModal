@@ -1,10 +1,10 @@
-simplemodal.grid.Items = function (config) {
+simpleModal.grid.Items = function (config) {
 	config = config || {};
 	if (!config.id) {
 		config.id = 'simplemodal-grid-items';
 	}
 	Ext.applyIf(config, {
-		url: simplemodal.config.connector_url,
+		url: simpleModal.config.connector_url,
 		fields: this.getFields(config),
 		columns: this.getColumns(config),
 		tbar: this.getTopBar(config),
@@ -34,7 +34,7 @@ simplemodal.grid.Items = function (config) {
 		remoteSort: true,
 		autoHeight: true,
 	});
-	simplemodal.grid.Items.superclass.constructor.call(this, config);
+	simpleModal.grid.Items.superclass.constructor.call(this, config);
 
 	// Clear selection on grid refresh
 	this.store.on('load', function () {
@@ -43,14 +43,14 @@ simplemodal.grid.Items = function (config) {
 		}
 	}, this);
 };
-Ext.extend(simplemodal.grid.Items, MODx.grid.Grid, {
+Ext.extend(simpleModal.grid.Items, MODx.grid.Grid, {
 	windows: {},
 
 	getMenu: function (grid, rowIndex) {
 		var ids = this._getSelectedIds();
 
 		var row = grid.getStore().getAt(rowIndex);
-		var menu = simplemodal.utils.getMenu(row.data['actions'], this, ids);
+		var menu = simpleModal.utils.getMenu(row.data['actions'], this, ids);
 
 		this.addContextMenuItem(menu);
 	},
@@ -204,13 +204,13 @@ Ext.extend(simplemodal.grid.Items, MODx.grid.Grid, {
 		}, {
 			header: _('simplemodal_item_active'),
 			dataIndex: 'active',
-			renderer: simplemodal.utils.renderBoolean,
+			renderer: simpleModal.utils.renderBoolean,
 			sortable: true,
 			width: 100,
 		}, {
 			header: _('simplemodal_grid_actions'),
 			dataIndex: 'actions',
-			renderer: simplemodal.utils.renderActions,
+			renderer: simpleModal.utils.renderActions,
 			sortable: false,
 			width: 100,
 			id: 'actions'
@@ -293,4 +293,4 @@ Ext.extend(simplemodal.grid.Items, MODx.grid.Grid, {
 		this.refresh();
 	}
 });
-Ext.reg('simplemodal-grid-items', simplemodal.grid.Items);
+Ext.reg('simplemodal-grid-items', simpleModal.grid.Items);

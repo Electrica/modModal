@@ -1,4 +1,4 @@
-simplemodal.panel.Home = function (config) {
+simpleModal.panel.Home = function (config) {
 	config = config || {};
 	Ext.apply(config, {
 		baseCls: 'modx-formpanel',
@@ -32,7 +32,7 @@ simplemodal.panel.Home = function (config) {
 			}]
 		}]
 	});
-	simplemodal.panel.Home.superclass.constructor.call(this, config);
+	simpleModal.panel.Home.superclass.constructor.call(this, config);
 };
-Ext.extend(simplemodal.panel.Home, MODx.Panel);
-Ext.reg('simplemodal-panel-home', simplemodal.panel.Home);
+Ext.extend(simpleModal.panel.Home, MODx.Panel);
+Ext.reg('simplemodal-panel-home', simpleModal.panel.Home);

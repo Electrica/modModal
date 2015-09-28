@@ -3,12 +3,12 @@
 $plugins = array();
 
 $tmp = array(
-	'simplemodal' => array(
+	'simpleModal' => array(
 		'file' => 'simplemodal',
 		'description' => '',
 		'events' => array(
-			'OnWebPageInit' => array(),
-			'OnWebPagePrerender' => array()
+            'OnWebPageInit' => array(),
+            'OnWebPagePrerender' => array()
 		)
 	)
 );
