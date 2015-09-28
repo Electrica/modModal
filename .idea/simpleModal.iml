@@ -7,10 +7,10 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
-          <root url="file://$USER_HOME$/Загрузки/modx-2.3.6-pl" />
+          <root url="file://D:/modx-2.4.1-pl" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$USER_HOME$/Загрузки/modx-2.3.6-pl" />
+          <root url="file://D:/modx-2.4.1-pl" />
         </SOURCES>
       </library>
     </orderEntry>
