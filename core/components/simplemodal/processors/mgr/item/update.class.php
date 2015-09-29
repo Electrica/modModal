@@ -3,9 +3,15 @@
 /**
  * Update an Item
  */
+<<<<<<< HEAD
 class modalWindowUpdateProcessor extends modObjectUpdateProcessor {
 	public $objectType = 'modalWindow';
 	public $classKey = 'modalWindow';
+=======
+class simpleModalItemUpdateProcessor extends modObjectUpdateProcessor {
+	public $objectType = 'simpleModalItem';
+	public $classKey = 'simpleModalItem';
+>>>>>>> origin/master
 	public $languageTopics = array('simplemodal');
 	//public $permission = 'save';
 
@@ -46,4 +52,8 @@ class modalWindowUpdateProcessor extends modObjectUpdateProcessor {
 	}
 }
 
+<<<<<<< HEAD
 return 'modalWindowUpdateProcessor';
+=======
+return 'simpleModalItemUpdateProcessor';
+>>>>>>> origin/master

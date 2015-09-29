@@ -3,9 +3,15 @@
 /**
  * Create an Item
  */
+<<<<<<< HEAD
 class modalWindowCreateProcessor extends modObjectCreateProcessor {
 	public $objectType = 'modalWindow';
 	public $classKey = 'modalWindow';
+=======
+class simpleModalItemCreateProcessor extends modObjectCreateProcessor {
+	public $objectType = 'simpleModalItem';
+	public $classKey = 'simpleModalItem';
+>>>>>>> origin/master
 	public $languageTopics = array('simplemodal');
 	//public $permission = 'create';
 
@@ -27,4 +33,8 @@ class modalWindowCreateProcessor extends modObjectCreateProcessor {
 
 }
 
+<<<<<<< HEAD
 return 'modalWindowCreateProcessor';
+=======
+return 'simpleModalItemCreateProcessor';
+>>>>>>> origin/master

@@ -3,9 +3,15 @@
 /**
  * Get an Item
  */
+<<<<<<< HEAD
 class simpleModalGetProcessor extends modObjectGetProcessor {
 	public $objectType = 'simpleModal';
 	public $classKey = 'modalWindow';
+=======
+class simpleModalItemGetProcessor extends modObjectGetProcessor {
+	public $objectType = 'simpleModalItem';
+	public $classKey = 'simpleModalItem';
+>>>>>>> origin/master
 	public $languageTopics = array('simplemodal:default');
 	//public $permission = 'view';
 
@@ -26,4 +32,8 @@ class simpleModalGetProcessor extends modObjectGetProcessor {
 
 }
 
+<<<<<<< HEAD
 return 'simpleModalGetProcessor';
+=======
+return 'simpleModalItemGetProcessor';
+>>>>>>> origin/master

@@ -3,9 +3,15 @@
 /**
  * Disable an Item
  */
+<<<<<<< HEAD
 class simpleModalDisableProcessor extends modObjectProcessor {
 	public $objectType = 'simpleModal';
 	public $classKey = 'modalWindow';
+=======
+class simpleModalItemDisableProcessor extends modObjectProcessor {
+	public $objectType = 'simpleModalItem';
+	public $classKey = 'simpleModalItem';
+>>>>>>> origin/master
 	public $languageTopics = array('simplemodal');
 	//public $permission = 'save';
 
@@ -38,4 +44,8 @@ class simpleModalDisableProcessor extends modObjectProcessor {
 
 }
 
+<<<<<<< HEAD
 return 'simpleModalDisableProcessor';
+=======
+return 'simpleModalItemDisableProcessor';
+>>>>>>> origin/master
