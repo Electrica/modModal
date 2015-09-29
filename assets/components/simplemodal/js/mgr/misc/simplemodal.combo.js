@@ -10,7 +10,7 @@ simpleModal.combo.Chunk = function(config) {
         ,pageSize: 20
         ,emptyText: _('simplemodal_combo_select')
         ,hideMode: 'offsets'
-        ,url: simpleModal.config.connector_url
+        ,url: MODx.config.connector_url
         ,baseParams: {
             action: 'element/chunk/getlist'
         }
@@ -33,7 +33,7 @@ simpleModal.combo.Resource = function(config) {
         ,pageSize: 20
         ,emptyText: _('simplemodal_combo_select')
         ,hideMode: 'offsets'
-        ,url: simpleModal.config.connector_url
+        ,url: MODx.config.connector_url
         ,baseParams: {
             action: 'resource/getlist'
             ,combo: true
