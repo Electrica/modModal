@@ -79,7 +79,7 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
                     name: 'chunk',
                     id: config.id + '-chunk',
                     anchor: '99%',
-                    allowBlank: false
+                    allowBlank: true
                 }]
             },{
                 columnWidth: .5
@@ -92,7 +92,7 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
                     name: 'id_resource',
                     id: config.id + '-id_resource',
                     anchor: '99%',
-                    allowBlank: false
+                    allowBlank: true
                 }]
             }]
         },{

@@ -10,7 +10,6 @@
         <field key="id_user" dbtype="int" phptype="int" null="true" default=""/>
         <field key="id_group" dbtype="int" phptype="int" null="true" default=""/>
         <field key="time_delay" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
-        <field key="time_after" dbtype="datetime" phptype="timestamp" null="true"/>
         <field key="time_start" dbtype="datetime" phptype="timestamp" null="true"/>
         <field key="time_stop" dbtype="datetime" phptype="timestamp" null="true"/>
         <field key="active" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="1"/>
