@@ -1,8 +1,8 @@
 <?php
 /** @var array $scriptProperties */
-/** @var simplemodal $simplemodal */
-if (!$simplemodal = $modx->getService('simplemodal', 'simplemodal', $modx->getOption('simplemodal_core_path', null, $modx->getOption('core_path') . 'components/simplemodal/') . 'model/simplemodal/', $scriptProperties)) {
-	return 'Could not load simplemodal class!';
+/** @var simpleModal $simpleModal */
+if (!$simpleModal = $modx->getService('simplemodal', 'simpleModal', $modx->getOption('simplemodal_core_path', null, $modx->getOption('core_path') . 'components/simplemodal/') . 'model/simplemodal/', $scriptProperties)) {
+	return 'Could not load simpleModal class!';
 }
 
 // Do your snippet code here. This demo grabs 5 items from our custom table.
@@ -14,14 +14,14 @@ $outputSeparator = $modx->getOption('outputSeparator', $scriptProperties, "\n");
 $toPlaceholder = $modx->getOption('toPlaceholder', $scriptProperties, false);
 
 // Build query
-$c = $modx->newQuery('simplemodalItem');
+$c = $modx->newQuery('simpleModalItem');
 $c->sortby($sortby, $sortdir);
 $c->limit($limit);
-$items = $modx->getIterator('simplemodalItem', $c);
+$items = $modx->getIterator('simpleModalItem', $c);
 
 // Iterate through items
 $list = array();
-/** @var simplemodalItem $item */
+/** @var simpleModalItem $item */
 foreach ($items as $item) {
 	$list[] = $modx->getChunk($tpl, $item->toArray());
 }

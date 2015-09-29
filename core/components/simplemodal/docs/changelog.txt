@@ -1,4 +1,4 @@
-Changelog for simplemodal.
+Changelog for simpleModal.
 
 1.0.0-beta
 ==============

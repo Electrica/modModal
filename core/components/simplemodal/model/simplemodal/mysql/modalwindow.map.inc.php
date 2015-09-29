@@ -1,5 +1,5 @@
 <?php
-$xpdo_meta_map['simpleModal']= array (
+$xpdo_meta_map['modalWindow']= array (
   'package' => 'simplemodal',
   'version' => '1.1',
   'table' => 'simplemodal_modal',
@@ -8,12 +8,13 @@ $xpdo_meta_map['simpleModal']= array (
   array (
     'name' => '',
     'description' => '',
+    'id_resource' => 0,
+    'chunk' => '',
     'id_user' => 0,
     'id_group' => 0,
     'time_delay' => '',
-    'time_after' => '',
-    'time_start' => '',
-    'time_stop' => '',
+    'time_start' => NULL,
+    'time_stop' => NULL,
     'active' => 1,
   ),
   'fieldMeta' => 
@@ -31,6 +32,21 @@ $xpdo_meta_map['simpleModal']= array (
       'dbtype' => 'text',
       'phptype' => 'text',
       'null' => true,
+      'default' => '',
+    ),
+    'id_resource' => 
+    array (
+      'dbtype' => 'int',
+      'phptype' => 'int',
+      'null' => true,
+      'default' => 0,
+    ),
+    'chunk' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '100',
+      'phptype' => 'string',
+      'null' => false,
       'default' => '',
     ),
     'id_user' => 
@@ -55,29 +71,17 @@ $xpdo_meta_map['simpleModal']= array (
       'null' => false,
       'default' => '',
     ),
-    'time_after' => 
-    array (
-      'dbtype' => 'varchar',
-      'precision' => '100',
-      'phptype' => 'string',
-      'null' => false,
-      'default' => '',
-    ),
     'time_start' => 
     array (
-      'dbtype' => 'varchar',
-      'precision' => '100',
-      'phptype' => 'string',
-      'null' => false,
-      'default' => '',
+      'dbtype' => 'datetime',
+      'phptype' => 'timestamp',
+      'null' => true,
     ),
     'time_stop' => 
     array (
-      'dbtype' => 'varchar',
-      'precision' => '100',
-      'phptype' => 'string',
-      'null' => false,
-      'default' => '',
+      'dbtype' => 'datetime',
+      'phptype' => 'timestamp',
+      'null' => true,
     ),
     'active' => 
     array (

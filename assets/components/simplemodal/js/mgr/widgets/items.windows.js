@@ -1,4 +1,4 @@
-simplemodal.window.CreateItem = function (config) {
+simpleModal.window.CreateItem = function (config) {
 	config = config || {};
 	if (!config.id) {
 		config.id = 'simplemodal-item-window-create';
@@ -7,7 +7,7 @@ simplemodal.window.CreateItem = function (config) {
 		title: _('simplemodal_item_create'),
 		width: 550,
 		autoHeight: true,
-		url: simplemodal.config.connector_url,
+		url: simpleModal.config.connector_url,
 		action: 'mgr/item/create',
 		fields: this.getFields(config),
 		keys: [{
@@ -16,9 +16,9 @@ simplemodal.window.CreateItem = function (config) {
 			}, scope: this
 		}]
 	});
-	simplemodal.window.CreateItem.superclass.constructor.call(this, config);
+	simpleModal.window.CreateItem.superclass.constructor.call(this, config);
 };
-Ext.extend(simplemodal.window.CreateItem, MODx.Window, {
+Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
 
 	getFields: function (config) {
 		return [{
@@ -35,7 +35,102 @@ Ext.extend(simplemodal.window.CreateItem, MODx.Window, {
 			id: config.id + '-description',
 			height: 150,
 			anchor: '99%'
-		}, {
+		},{
+            layout:'column'
+            ,border: false
+            ,anchor: '100%',
+            items: [{
+                columnWidth: .5
+                ,layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    xtype: 'xdatetime',
+                    fieldLabel: _('simplemodal_item_time_start'),
+                    name: 'time_start',
+                    id: config.id + '-time_start',
+                    anchor: '99%'
+                }]
+            },{
+                columnWidth: .5
+                ,layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    xtype: 'xdatetime',
+                    fieldLabel: _('simplemodal_item_time_stop'),
+                    name: 'time_stop',
+                    id: config.id + '-time_stop',
+                    anchor: '99%'
+                }]
+            }]
+        },{
+            layout:'column'
+            ,border: false
+            ,anchor: '100%',
+            items: [{
+                columnWidth: .5
+                ,layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    xtype: 'simplemodal-combo-chunk',
+                    fieldLabel: _('simplemodal_item_chunk'),
+                    name: 'chunk',
+                    id: config.id + '-chunk',
+                    anchor: '99%',
+                    allowBlank: true
+                }]
+            },{
+                columnWidth: .5
+                ,layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    xtype: 'simplemodal-combo-resource',
+                    fieldLabel: _('simplemodal_item_resource'),
+                    name: 'id_resource',
+                    id: config.id + '-id_resource',
+                    anchor: '99%',
+                    allowBlank: true
+                }]
+            }]
+        },{
+            layout:'column'
+            ,border: false
+            ,anchor: '100%',
+            items: [{
+                columnWidth: .5,
+                layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    xtype: 'modx-combo-user',
+                    fieldLabel: _('simplemodal_item_user'),
+                    name: 'id_user',
+                    id: config.id + '-id_user',
+                    anchor: '99%'
+                }]
+            },{
+                columnWidth: .5
+                ,layout: 'form'
+                ,defaults: { msgTarget: 'under' }
+                ,border:false,
+                items: [{
+                    columnWidth: .5
+                    ,layout: 'form'
+                    ,defaults: { msgTarget: 'under' }
+                    ,border:false,
+                    items: [{
+                        xtype: 'modx-combo-usergroup',
+                        fieldLabel: _('simplemodal_item_usergroup'),
+                        name: 'id_group',
+                        id: config.id + '-id_group',
+                        anchor: '99%'
+                    }]
+                }]
+            }]
+        }, {
 			xtype: 'xcheckbox',
 			boxLabel: _('simplemodal_item_active'),
 			name: 'active',
@@ -45,10 +140,10 @@ Ext.extend(simplemodal.window.CreateItem, MODx.Window, {
 	}
 
 });
-Ext.reg('simplemodal-item-window-create', simplemodal.window.CreateItem);
+Ext.reg('simplemodal-item-window-create', simpleModal.window.CreateItem);
 
 
-simplemodal.window.UpdateItem = function (config) {
+simpleModal.window.UpdateItem = function (config) {
 	config = config || {};
 	if (!config.id) {
 		config.id = 'simplemodal-item-window-update';
@@ -57,7 +152,7 @@ simplemodal.window.UpdateItem = function (config) {
 		title: _('simplemodal_item_update'),
 		width: 550,
 		autoHeight: true,
-		url: simplemodal.config.connector_url,
+		url: simpleModal.config.connector_url,
 		action: 'mgr/item/update',
 		fields: this.getFields(config),
 		keys: [{
@@ -66,9 +161,9 @@ simplemodal.window.UpdateItem = function (config) {
 			}, scope: this
 		}]
 	});
-	simplemodal.window.UpdateItem.superclass.constructor.call(this, config);
+	simpleModal.window.UpdateItem.superclass.constructor.call(this, config);
 };
-Ext.extend(simplemodal.window.UpdateItem, MODx.Window, {
+Ext.extend(simpleModal.window.UpdateItem, MODx.Window, {
 
 	getFields: function (config) {
 		return [{
@@ -98,4 +193,4 @@ Ext.extend(simplemodal.window.UpdateItem, MODx.Window, {
 	}
 
 });
-Ext.reg('simplemodal-item-window-update', simplemodal.window.UpdateItem);
+Ext.reg('simplemodal-item-window-update', simpleModal.window.UpdateItem);

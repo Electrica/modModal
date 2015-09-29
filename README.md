@@ -1,8 +1,18 @@
-## simplemodal
+## simpleModal
 
-Компонент для работы с модальными окнами.
+simpleModal is a base Extra template that is useful when wanting to create a new
+Extra for MODx Revolution. One can git archive from this repository to start
+with all the file structure for beginning MODx Extra development pre-setup.
 
-Все предложения\баги тут [https://github.com/Electrica/simplemodal/issues](https://github.com/Electrica/simplemodal/issues)
+## How to Export
+
+First, clone this repository somewhere on your development machine:
+
+`git clone http://github.com/splittingred/simpleModal.git ./`
+
+Then, create the target directory where you want to create the file.
+
+Then, navigate to the directory simpleModal is now in, and do this:
 
 `git archive HEAD | (cd /path/where/I/want/my/new/repo/ && tar -xvf -)`
 
@@ -14,8 +24,8 @@ there!
 
 ## Configuration
 
-Now, you'll want to change references to simplemodal in the files in your
-new copied-from-simplemodal repo to whatever name of your new Extra will be. Once
+Now, you'll want to change references to simpleModal in the files in your
+new copied-from-simpleModal repo to whatever name of your new Extra will be. Once
 you've done that, you can create some System Settings:
 
 - 'mynamespace.core_path' - Point to /path/to/my/extra/core/components/extra/
@@ -36,12 +46,12 @@ functionality. This Extra contains files and the setup to do the following:
 If you do not require all of this functionality, simply remove it and change the
 appropriate code.
 
-Also, you'll want to change all the references of 'simplemodal' to whatever the
+Also, you'll want to change all the references of 'simpleModal' to whatever the
 name of your component is.
 
 ## Copyright Information
 
-simplemodal is distributed as GPL (as MODx Revolution is), but the copyright owner
-(Shaun McCormick) grants all users of simplemodal the ability to modify, distribute
-and use simplemodal in MODx development as they see fit, as long as attribution
+simpleModal is distributed as GPL (as MODx Revolution is), but the copyright owner
+(Shaun McCormick) grants all users of simpleModal the ability to modify, distribute
+and use simpleModal in MODx development as they see fit, as long as attribution
 is given somewhere in the distributed source of all derivative works.

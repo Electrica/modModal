@@ -1,5 +1,5 @@
 --------------------
-simplemodal
+simpleModal
 --------------------
 Author: Electrica <electricaev@gmail.com>
 --------------------
