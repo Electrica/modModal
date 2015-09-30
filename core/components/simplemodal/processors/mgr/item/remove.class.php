@@ -3,15 +3,9 @@
 /**
  * Remove an s
  */
-<<<<<<< HEAD
 class modalWindowRemoveProcessor extends modObjectProcessor {
 	public $objectType = 'modalWindow';
 	public $classKey = 'modalWindow';
-=======
-class simpleModalItemRemoveProcessor extends modObjectProcessor {
-	public $objectType = 'simpleModalItem';
-	public $classKey = 'simpleModalItem';
->>>>>>> origin/master
 	public $languageTopics = array('simplemodal');
 	//public $permission = 'remove';
 
@@ -30,11 +24,7 @@ class simpleModalItemRemoveProcessor extends modObjectProcessor {
 		}
 
 		foreach ($ids as $id) {
-<<<<<<< HEAD
 			/** @var modalWindow $object */
-=======
-			/** @var simpleModalItem $object */
->>>>>>> origin/master
 			if (!$object = $this->modx->getObject($this->classKey, $id)) {
 				return $this->failure($this->modx->lexicon('simplemodal__err_nf'));
 			}
@@ -46,9 +36,4 @@ class simpleModalItemRemoveProcessor extends modObjectProcessor {
 	}
 
 }
-
-<<<<<<< HEAD
 return 'modalWindowRemoveProcessor';
-=======
-return 'simpleModalItemRemoveProcessor';
->>>>>>> origin/master

@@ -3,15 +3,10 @@
 /**
  * Disable an Item
  */
-<<<<<<< HEAD
-class simpleModalDisableProcessor extends modObjectProcessor {
-	public $objectType = 'simpleModal';
+
+class modalWindowDisableProcessor extends modObjectProcessor {
+	public $objectType = 'modalWindow';
 	public $classKey = 'modalWindow';
-=======
-class simpleModalItemDisableProcessor extends modObjectProcessor {
-	public $objectType = 'simpleModalItem';
-	public $classKey = 'simpleModalItem';
->>>>>>> origin/master
 	public $languageTopics = array('simplemodal');
 	//public $permission = 'save';
 
@@ -30,7 +25,7 @@ class simpleModalItemDisableProcessor extends modObjectProcessor {
 		}
 
 		foreach ($ids as $id) {
-			/** @var simpleModalItem $object */
+			/** @var modalWindow $object */
 			if (!$object = $this->modx->getObject($this->classKey, $id)) {
 				return $this->failure($this->modx->lexicon('simplemodal_item_err_nf'));
 			}
@@ -43,9 +38,4 @@ class simpleModalItemDisableProcessor extends modObjectProcessor {
 	}
 
 }
-
-<<<<<<< HEAD
-return 'simpleModalDisableProcessor';
-=======
-return 'simpleModalItemDisableProcessor';
->>>>>>> origin/master
+return 'modalWindowDisableProcessor';

@@ -3,9 +3,10 @@
 /**
  * Enable an Item
  */
-class simpleModalItemEnableProcessor extends modObjectProcessor {
-	public $objectType = 'simpleModalItem';
-	public $classKey = 'simpleModalItem';
+class modalWindowEnableProcessor extends modObjectProcessor {
+
+	public $objectType = 'modalWindow';
+	public $classKey = 'modalWindow';
 	public $languageTopics = array('simplemodal');
 	//public $permission = 'save';
 
@@ -24,7 +25,7 @@ class simpleModalItemEnableProcessor extends modObjectProcessor {
 		}
 
 		foreach ($ids as $id) {
-			/** @var simpleModalItem $object */
+			/** @var modalWindow $object */
 			if (!$object = $this->modx->getObject($this->classKey, $id)) {
 				return $this->failure($this->modx->lexicon('simplemodal_item_err_nf'));
 			}
@@ -38,4 +39,4 @@ class simpleModalItemEnableProcessor extends modObjectProcessor {
 
 }
 
-return 'simpleModalItemEnableProcessor';
+return 'modalWindowEnableProcessor';
