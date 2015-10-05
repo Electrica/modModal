@@ -39,4 +39,41 @@ class simpleModal {
 		$this->modx->lexicon->load('simplemodal:default');
 	}
 
+    /** @param bool|false $id */
+
+    public function getResourceId($id = false){
+
+        $user = $this->modx->getUser()->toArray();
+
+
+        /**
+         *
+         *  1.Проверить наличие ресурса. Если нет то показывать везде
+         *  2.Проверить наличие юзера. Если нету то показывать всем юзерам
+         *  3.Проверить наличие группу. Если нет то показывать всем.
+         *  4.Проверить наличие чанка. Если нет то установить чанк по умолчанию.
+         *
+         */
+
+        $obj = $this->modx->getCollection('modalWindow', array(
+            'active' => 1
+        ));
+
+        if(!count($obj)){
+            return false;
+        }
+
+        $data = array();
+
+        foreach($obj as $k => $v){
+            if($v->resource == 0 || $v->resource == $id){
+                if($v->user == 0 || $v->user == $user['id']){
+                    if($v->group == 0 || $v->group == $user['primary_group']){
+                        return $data[$v->resource] = $v->toArray();
+                    }
+                }
+            }
+        }
+    }
+
 }

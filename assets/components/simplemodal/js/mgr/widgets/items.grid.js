@@ -182,7 +182,7 @@ Ext.extend(simpleModal.grid.Items, MODx.grid.Grid, {
 	},
 
 	getFields: function (config) {
-		return ['id', 'name', 'description', 'active', 'actions', 'time_delay'];
+		return ['id', 'name', 'description', 'active', 'actions', 'time_delay', 'user', 'group', 'resource'];
 	},
 
 	getColumns: function (config) {
@@ -195,12 +195,25 @@ Ext.extend(simpleModal.grid.Items, MODx.grid.Grid, {
 			header: _('simplemodal_item_name'),
 			dataIndex: 'name',
 			sortable: true,
-			width: 200
+			width: 100
 		}, {
 			header: _('simplemodal_item_description'),
 			dataIndex: 'description',
 			sortable: false,
-			width: 250
+			width: 200
+		},{
+			header: _('simplemodal_item_user_grid'),
+			dataIndex: 'user',
+			sortable: true
+		},{
+			header: _('simplemodal_item_group'),
+			dataIndex: 'group',
+			sortable: true
+		},{
+			header: _('simplemodal_item_resource'),
+			dataIndex: 'resource',
+			sortable: false,
+			width: 100
 		}, {
             header: _('simplemodal_item_time_delay'),
             dataIndex: 'time_delay',
@@ -217,7 +230,7 @@ Ext.extend(simpleModal.grid.Items, MODx.grid.Grid, {
 			dataIndex: 'actions',
 			renderer: simpleModal.utils.renderActions,
 			sortable: false,
-			width: 100,
+			width: 120,
 			id: 'actions'
 		}];
 	},

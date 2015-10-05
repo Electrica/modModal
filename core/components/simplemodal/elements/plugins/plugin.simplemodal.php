@@ -1,8 +1,24 @@
 <?php
 
+/**
+ * @var modx $modx
+ */
+
 $event = $modx->event->name;
+$id = $modx->resourceIdentifier;
+$simpleModal = $modx->getService('simplemodal', 'simpleModal', $modx->getOption('simplemodal_core_path') . 'model/simplemodal/',$scriptProperties);
+/**
+ * @var simpleModal $simpleModal
+ */
 
 if($event == 'OnWebPageInit' || $event == 'OnWebPagePrerender'){
+
+    $data = $simpleModal->getResourceId($id);
+
+    print("<pre>");
+    print_r($data);
+    die();
+
 
     foreach(json_decode($modx->getOption('simplemodal_id_json')) as $k => $v){
         if($modx->resourceIdentifier == $v->id){

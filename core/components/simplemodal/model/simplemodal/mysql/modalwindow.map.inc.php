@@ -8,11 +8,11 @@ $xpdo_meta_map['modalWindow']= array (
   array (
     'name' => '',
     'description' => '',
-    'id_resource' => 0,
+    'resource' => 0,
     'chunk' => '',
-    'id_user' => 0,
-    'id_group' => 0,
-    'time_delay' => '',
+    'user' => 0,
+    'group' => 0,
+    'time_delay' => 60,
     'time_start' => NULL,
     'time_stop' => NULL,
     'active' => 1,
@@ -34,11 +34,11 @@ $xpdo_meta_map['modalWindow']= array (
       'null' => true,
       'default' => '',
     ),
-    'id_resource' => 
+    'resource' => 
     array (
       'dbtype' => 'int',
       'phptype' => 'int',
-      'null' => true,
+      'null' => false,
       'default' => 0,
     ),
     'chunk' => 
@@ -49,39 +49,39 @@ $xpdo_meta_map['modalWindow']= array (
       'null' => false,
       'default' => '',
     ),
-    'id_user' => 
+    'user' => 
     array (
       'dbtype' => 'int',
       'phptype' => 'int',
-      'null' => true,
+      'null' => false,
       'default' => 0,
     ),
-    'id_group' => 
+    'group' => 
     array (
       'dbtype' => 'int',
       'phptype' => 'int',
-      'null' => true,
+      'null' => false,
       'default' => 0,
     ),
     'time_delay' => 
     array (
-      'dbtype' => 'varchar',
-      'precision' => '100',
-      'phptype' => 'string',
+      'dbtype' => 'int',
+      'precision' => '10',
+      'phptype' => 'int',
       'null' => false,
-      'default' => '',
+      'default' => 60,
     ),
     'time_start' => 
     array (
       'dbtype' => 'datetime',
       'phptype' => 'timestamp',
-      'null' => true,
+      'null' => false,
     ),
     'time_stop' => 
     array (
       'dbtype' => 'datetime',
       'phptype' => 'timestamp',
-      'null' => true,
+      'null' => false,
     ),
     'active' => 
     array (
