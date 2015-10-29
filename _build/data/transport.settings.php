@@ -3,11 +3,6 @@
 $settings = array();
 
 $tmp = array(
-    'id_json' => array(
-        'xtype' => 'textfield',
-        'value' => '[{"id":1,"chunk":"tpl.simplemodal","delay":2000,"time":60}]',
-        'area' => 'simplemodal_main',
-    ),
     'active' => array(
         'xtype' => 'combo-boolean',
         'value' => false,

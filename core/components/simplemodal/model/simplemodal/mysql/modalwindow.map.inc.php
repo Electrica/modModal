@@ -13,6 +13,7 @@ $xpdo_meta_map['modalWindow']= array (
     'user' => 0,
     'group' => 0,
     'time_delay' => 60,
+    'coockie' => 3600,
     'time_start' => NULL,
     'time_stop' => NULL,
     'active' => 1,
@@ -37,7 +38,7 @@ $xpdo_meta_map['modalWindow']= array (
     'resource' => 
     array (
       'dbtype' => 'int',
-      'phptype' => 'int',
+      'precision' => '10',
       'null' => false,
       'default' => 0,
     ),
@@ -70,6 +71,14 @@ $xpdo_meta_map['modalWindow']= array (
       'phptype' => 'int',
       'null' => false,
       'default' => 60,
+    ),
+    'coockie' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '10',
+      'phptype' => 'int',
+      'null' => false,
+      'default' => 3600,
     ),
     'time_start' => 
     array (

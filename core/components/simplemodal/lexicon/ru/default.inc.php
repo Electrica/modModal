@@ -11,6 +11,7 @@ $_lang['simplemodal_item_id'] = 'Id';
 $_lang['simplemodal_item_name'] = 'Название';
 $_lang['simplemodal_item_description'] = 'Описание';
 $_lang['simplemodal_item_time_delay'] = 'Время задержки';
+$_lang['simplemodal_item_coockie'] = 'Время до следующего показа окна';
 $_lang['simplemodal_item_time_start'] = 'Время начала показов';
 $_lang['simplemodal_item_time_stop'] = 'Время окончания показов';
 $_lang['simplemodal_item_chunk'] = 'Чанк модального окна';
@@ -38,3 +39,7 @@ $_lang['simplemodal_item_err_remove'] = 'Ошибка при удалении м
 $_lang['simplemodal_item_err_save'] = 'Ошибка при сохранении модального окна.';
 $_lang['simplemodal_grid_search'] = 'Поиск';
 $_lang['simplemodal_grid_actions'] = 'Действия';
+
+
+$_lang['simplemodal_user_no_empty'] = 'Для пользователя есть окно.';
+$_lang['simplemodal_group_no_empty'] = 'Для группы уже есть окно.';

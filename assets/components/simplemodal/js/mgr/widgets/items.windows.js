@@ -36,40 +36,34 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
 			height: 150,
 			anchor: '99%'
 		},{
-            xtype: 'textfield',
-            fieldLabel: _('simplemodal_item_time_delay'),
-            name: 'time_delay',
-            id: config.id + '-time_delay',
-            anchor: '99%'
-        },{
-            //layout:'column'
-            //,border: false
-            //,anchor: '100%',
-            //items: [{
-            //    columnWidth: .5
-            //    ,layout: 'form'
-            //    ,defaults: { msgTarget: 'under' }
-            //    ,border:false,
-            //    items: [{
-            //        xtype: 'xdatetime',
-            //        fieldLabel: _('simplemodal_item_time_start'),
-            //        name: 'time_start',
-            //        id: config.id + '-time_start',
-            //        anchor: '99%'
-            //    }]
-            //},{
-            //    columnWidth: .5
-            //    ,layout: 'form'
-            //    ,defaults: { msgTarget: 'under' }
-            //    ,border:false,
-            //    items: [{
-            //        xtype: 'xdatetime',
-            //        fieldLabel: _('simplemodal_item_time_stop'),
-            //        name: 'time_stop',
-            //        id: config.id + '-time_stop',
-            //        anchor: '99%'
-            //    }]
-            //}]
+            layout: 'column',
+            border: false,
+            anchor: '100%',
+            items: [{
+                columnWidth: .5,
+                layout: 'form',
+                defaults: {msTarget: 'under'},
+                border: false,
+                items: [{
+                    xtype: 'textfield',
+                    fieldLabel: _('simplemodal_item_time_delay'),
+                    name: 'time_delay',
+                    id: config.id + '-time_delay',
+                    anchor: '99%'
+                }]
+            },{
+                columnWidth: .5,
+                layout: 'form',
+                defaults: {msTarget: 'under'},
+                border: false,
+                items: [{
+                    xtype: 'textfield',
+                    fieldLabel: _('simplemodal_item_coockie'),
+                    name: 'coockie',
+                    id: config.id + '-coockie',
+                    anchor: '99%'
+                }]
+            }]
         },{
             layout:'column'
             ,border: false
@@ -80,7 +74,7 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
                 ,defaults: { msgTarget: 'under' }
                 ,border:false,
                 items: [{
-                    xtype: 'simplemodal-combo-chunk',
+                    xtype: 'textfield',
                     fieldLabel: _('simplemodal_item_chunk'),
                     name: 'chunk',
                     id: config.id + '-chunk',
@@ -96,8 +90,8 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
                 items: [{
                     xtype: 'textfield',
                     fieldLabel: _('simplemodal_item_resource'),
-                    name: 'id_resource',
-                    id: config.id + '-id_resource',
+                    name: 'resource',
+                    id: config.id + '-resource',
                     anchor: '99%',
                     allowBlank: true,
                     editable: true
@@ -195,40 +189,34 @@ Ext.extend(simpleModal.window.UpdateItem, MODx.Window, {
             height: 150,
             anchor: '99%'
         },{
-            xtype: 'textfield',
-            fieldLabel: _('simplemodal_item_time_delay'),
-            name: 'time_delay',
-            id: config.id + '-time_delay',
-            anchor: '99%'
-        },{
-            //layout:'column'
-            //,border: false
-            //,anchor: '100%',
-            //items: [{
-            //    columnWidth: .5
-            //    ,layout: 'form'
-            //    ,defaults: { msgTarget: 'under' }
-            //    ,border:false,
-            //    items: [{
-            //        xtype: 'xdatetime',
-            //        fieldLabel: _('simplemodal_item_time_start'),
-            //        name: 'time_start',
-            //        id: config.id + '-time_start',
-            //        anchor: '99%'
-            //    }]
-            //},{
-            //    columnWidth: .5
-            //    ,layout: 'form'
-            //    ,defaults: { msgTarget: 'under' }
-            //    ,border:false,
-            //    items: [{
-            //        xtype: 'xdatetime',
-            //        fieldLabel: _('simplemodal_item_time_stop'),
-            //        name: 'time_stop',
-            //        id: config.id + '-time_stop',
-            //        anchor: '99%'
-            //    }]
-            //}]
+            layout: 'column',
+            border: false,
+            anchor: '100%',
+            items: [{
+                columnWidth: .5,
+                layout: 'form',
+                defaults: {msTarget: 'under'},
+                border: false,
+                items: [{
+                    xtype: 'textfield',
+                    fieldLabel: _('simplemodal_item_time_delay'),
+                    name: 'time_delay',
+                    id: config.id + '-time_delay',
+                    anchor: '99%'
+                }]
+            },{
+                columnWidth: .5,
+                layout: 'form',
+                defaults: {msTarget: 'under'},
+                border: false,
+                items: [{
+                    xtype: 'textfield',
+                    fieldLabel: _('simplemodal_item_coockie'),
+                    name: 'coockie',
+                    id: config.id + '-coockie',
+                    anchor: '99%'
+                }]
+            }]
         },{
             layout:'column'
             ,border: false
@@ -239,7 +227,7 @@ Ext.extend(simpleModal.window.UpdateItem, MODx.Window, {
                 ,defaults: { msgTarget: 'under' }
                 ,border:false,
                 items: [{
-                    xtype: 'simplemodal-combo-chunk',
+                    xtype: 'textfield',
                     fieldLabel: _('simplemodal_item_chunk'),
                     name: 'chunk',
                     id: config.id + '-chunk',

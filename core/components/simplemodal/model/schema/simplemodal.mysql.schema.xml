@@ -5,11 +5,12 @@
     <object class="modalWindow" table="simplemodal_modal" extends="xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
         <field key="description" dbtype="text" phptype="text" null="true" default="" />
-        <field key="resource" dbtype="int" phptype="int" null="false" default=""/>
+        <field key="resource" dbtype="int" precision="10" null="false" default=""/>
         <field key="chunk" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
         <field key="user" dbtype="int" phptype="int" null="false" default=""/>
         <field key="group" dbtype="int" phptype="int" null="false" default=""/>
         <field key="time_delay" dbtype="int" precision="10" phptype="int" null="false" default="60"/>
+        <field key="coockie" dbtype="int" precision="10" phptype="int" null="false" default="3600"/>
         <field key="time_start" dbtype="datetime" phptype="timestamp" null="false"/>
         <field key="time_stop" dbtype="datetime" phptype="timestamp" null="false"/>
         <field key="active" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="1"/>

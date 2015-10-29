@@ -45,7 +45,6 @@ class simpleModal {
 
         $user = $this->modx->getUser()->toArray();
 
-
         /**
          *
          *  1.Проверить наличие ресурса. Если нет то показывать везде
@@ -63,17 +62,24 @@ class simpleModal {
             return false;
         }
 
-        $data = array();
-
         foreach($obj as $k => $v){
+
+            $a[] = $v->resource;
+
             if($v->resource == 0 || $v->resource == $id){
-                if($v->user == 0 || $v->user == $user['id']){
-                    if($v->group == 0 || $v->group == $user['primary_group']){
-                        return $data[$v->resource] = $v->toArray();
+
+                if($v->group != 0 && $v->group == $user['primary_group']){
+                    return $v->toArray();
+                }elseif($v->group == 0){
+                    if($v->user != 0 && $v->user == $user['id']){
+                        return $v->toArray();
+                    }elseif($v->user == 0 && $user['id'] == 0){
+                        return $v->toArray();
                     }
                 }
             }
         }
+
     }
 
 }
