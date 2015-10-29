@@ -182,7 +182,7 @@ Ext.extend(simpleModal.grid.Items, MODx.grid.Grid, {
 	},
 
 	getFields: function (config) {
-		return ['id', 'name', 'description', 'active', 'actions', 'time_delay', 'user', 'group', 'resource'];
+		return ['id', 'name', 'description', 'active', 'actions', 'time_delay', 'user_description', 'group_description', 'resource'];
 	},
 
 	getColumns: function (config) {
@@ -203,11 +203,11 @@ Ext.extend(simpleModal.grid.Items, MODx.grid.Grid, {
 			width: 200
 		},{
 			header: _('simplemodal_item_user_grid'),
-			dataIndex: 'user',
+			dataIndex: 'user_description',
 			sortable: true
 		},{
 			header: _('simplemodal_item_group'),
-			dataIndex: 'group',
+			dataIndex: 'group_description',
 			sortable: true
 		},{
 			header: _('simplemodal_item_resource'),

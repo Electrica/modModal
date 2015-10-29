@@ -32,6 +32,14 @@ class modalWindowGetListProcessor extends modObjectGetListProcessor {
 	 * @return xPDOQuery
 	 */
 	public function prepareQueryBeforeCount(xPDOQuery $c) {
+        $c->leftJoin('modUser', 'modUser', 'modalWindow.user = modUser.id');
+        $c->leftJoin('modUserGroup', 'modUserGroup', 'modalWindow.group = modUserGroup.id');
+        $c->select($this->modx->getSelectColumns($this->classKey, $this->classKey));
+        $c->select(array(
+            'user_description' => 'modUser.username',
+            'group_description' => 'modUserGroup.name'
+        ));
+
 		$query = trim($this->getProperty('query'));
 		if ($query) {
 			$c->where(array(
