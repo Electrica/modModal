@@ -24,12 +24,13 @@ class modalWindowCreateProcessor extends modObjectCreateProcessor {
 			$this->modx->error->addField('name', $this->modx->lexicon('simplemodal_item_err_ae'));
 		}
 
-        if($this->modx->getCount('modalWindow', array('group' => $group))){
-
-            if($this->modx->getCount('modalWindow', array('user' => $user))){
-                $this->modx->error->addField('group', $this->modx->lexicon('simplemodal_group_no_empty'));
-            }
+        if($this->modx->getCount('modalWindow', array('group' => $group)) && $this->modx->getCount('modalWindow', array('user' => $user))){
+            $this->modx->error->addField('group', $this->modx->lexicon('simplemodal_group_no_empty'));
         }
+
+//        if($this->modx->getCount('modalWindow', array('user' => $user))){
+//            $this->modx->error->addField('user', $this->modx->lexicon('simplemodal_user_no_empty'));
+//        }
 
 		return parent::beforeSet();
 	}
