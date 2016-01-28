@@ -40,6 +40,11 @@ $_lang['simplemodal_item_err_save'] = 'Ошибка при сохранении 
 $_lang['simplemodal_grid_search'] = 'Поиск';
 $_lang['simplemodal_grid_actions'] = 'Действия';
 
+$_lang['simplemodal_recipient_type'] = 'Тип получателя';
+$_lang['simplemodal_create_user'] = 'Пользователь';
+$_lang['simplemodal_create_usergroup'] = 'Группа';
+$_lang['simplemodal_create_all'] = 'Все';
+
 
 $_lang['simplemodal_user_no_empty'] = 'Для пользователя есть окно.';
 $_lang['simplemodal_group_no_empty'] = 'Для группы уже есть окно.';
