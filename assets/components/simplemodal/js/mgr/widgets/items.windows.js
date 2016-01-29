@@ -57,8 +57,8 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
        items.push({
             xtype: 'modx-combo-user'
            , name: 'user'
-            , id: config.id + '-mc-recipient-user'
-            , fieldLabel: _('simplemodal_item_user')
+            , id: 'mc-recipient-user'
+            , fieldLabel: _('simplemodal_itessssm_user')
             , allowBlank: false
             , anchor: '100%'
         });
@@ -66,7 +66,7 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
        items.push({
             xtype: 'modx-combo-usergroup'
            , name: 'group'
-            , id: config.id + '-mc-recipient-usergroup'
+            , id: 'mc-recipient-usergroup'
             , fieldLabel: _('simplemodal_item_usergroup')
             , allowBlank: false
             , anchor: '100%'
@@ -74,7 +74,7 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
 
         items.push({
             xtype: 'hidden'
-            , id: config.id + '-mc-recipient-all'
+            , id: 'mc-recipient-all'
             , name: 'all'
             , fieldLabel: _('all')
             , value: 'all'
@@ -207,13 +207,13 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
     , showRecipient: function (cb, rec, i) {
         var form = this.fp.getForm();
         for (var x = 0; x < this.tps.length; x++) {
-            var f = form.findField('simplemodal-item-window-create-mc-recipient-' + this.tps[x]);
+            var f = form.findField('mc-recipient-' + this.tps[x]);
             if (f) {
                 this.hideField(f);
             }
         }
         var type = rec ? rec.data.type : 'user';
-        var fd = form.findField('simplemodal-item-window-create-mc-recipient-' + type);
+        var fd = form.findField('mc-recipient-' + type);
         if (fd) {
             this.showField(fd);
         }
