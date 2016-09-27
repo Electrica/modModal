@@ -9,7 +9,7 @@ simpleModal.window.CreateItem = function (config) {
         autoHeight: true,
         url: simpleModal.config.connector_url,
         action: 'mgr/item/create',
-        fields: this.getFields(config),
+        fields: this.getFields(),
         keys: []
         //keys: [{
         //	key: Ext.EventObject.ENTER, shift: true, fn: function () {
@@ -24,41 +24,68 @@ simpleModal.window.CreateItem = function (config) {
 };
 Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
 
-    tps: ['user', 'usergroup', 'all']
+    tps: ['user','usergroup','role','all']
 
-    , getFields: function (config) {
+    , getFields: function () {
+
+        //var data = [];
+        //data.push(['user', _('simplemodal_create_user')]);
+        //data.push(['usergroup', _('simplemodal_create_usergroup')]);
+        //data.push(['all', _('simplemodal_create_all')]);
+
+        //var items = [{
+        //    xtype: 'combo'
+        //    , fieldLabel: _('simplemodal_recipient_type')
+        //    , name: 'type'
+        //    , hiddenName: 'type'
+        //    , store: new Ext.data.SimpleStore({
+        //        fields: ['type', 'disp']
+        //        , data: data
+        //    })
+        //    , mode: 'local'
+        //    , triggerAction: 'all'
+        //    , displayField: 'disp'
+        //    , valueField: 'type'
+        //    , editable: false
+        //    , value: data[0][0]
+        //    , listeners: {
+        //        'select': {fn: this.showRecipient, scope: this}
+        //    }
+        //    , anchor: '100%'
+        //}];
 
         var data = [];
-        data.push(['user', _('simplemodal_create_user')]);
-        data.push(['usergroup', _('simplemodal_create_usergroup')]);
-        data.push(['all', _('simplemodal_create_all')]);
+        data.push(['user',_('simplemodal_create_user')]);
+        data.push(['usergroup',_('simplemodal_create_usergroup')]);
+        data.push(['role',_('simplemodal_create_role')]);
+        data.push(['all',_('simplemodal_create_all')]);
 
         var items = [{
             xtype: 'combo'
-            , fieldLabel: _('simplemodal_recipient_type')
-            , name: 'type'
-            , hiddenName: 'type'
-            , store: new Ext.data.SimpleStore({
-                fields: ['type', 'disp']
-                , data: data
+            ,fieldLabel: _('simplemodal_recipient_type')
+            ,name: 'type'
+            ,hiddenName: 'type'
+            ,store: new Ext.data.SimpleStore({
+                fields: ['type','disp']
+                ,data: data
             })
-            , mode: 'local'
-            , triggerAction: 'all'
-            , displayField: 'disp'
-            , valueField: 'type'
-            , editable: false
-            , value: data[0][0]
-            , listeners: {
-                'select': {fn: this.showRecipient, scope: this}
+            ,mode: 'local'
+            ,triggerAction: 'all'
+            ,displayField: 'disp'
+            ,valueField: 'type'
+            ,editable: false
+            ,value: data[0][0]
+            ,listeners: {
+                'select': {fn:this.showRecipient,scope:this}
             }
-            , anchor: '100%'
+            ,anchor: '100%'
         }];
 
        items.push({
             xtype: 'modx-combo-user'
            , name: 'user'
             , id: 'mc-recipient-user'
-            , fieldLabel: _('simplemodal_itessssm_user')
+            , fieldLabel: _('simplemodal_item_user')
             , allowBlank: false
             , anchor: '100%'
         });
@@ -84,14 +111,14 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
         	xtype: 'textfield',
         	fieldLabel: _('simplemodal_item_name'),
         	name: 'name',
-        	id: config.id + '-name',
+        	//id: config.id + '-name',
         	anchor: '99%',
         	allowBlank: false,
         }, {
         	xtype: 'textarea',
         	fieldLabel: _('simplemodal_item_description'),
         	name: 'description',
-        	id: config.id + '-description',
+        	//id: config.id + '-description',
         	height: 150,
         	anchor: '99%'
         },{
@@ -107,7 +134,7 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
                    xtype: 'textfield',
                    fieldLabel: _('simplemodal_item_time_delay'),
                    name: 'time_delay',
-                   id: config.id + '-time_delay',
+                   //id: config.id + '-time_delay',
                    anchor: '99%'
                }]
            },{
@@ -119,7 +146,7 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
                    xtype: 'textfield',
                    fieldLabel: _('simplemodal_item_coockie'),
                    name: 'coockie',
-                   id: config.id + '-coockie',
+                   //id: config.id + '-coockie',
                    anchor: '99%'
                }]
            }]
@@ -136,7 +163,7 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
                    xtype: 'textfield',
                    fieldLabel: _('simplemodal_item_chunk'),
                    name: 'chunk',
-                   id: config.id + '-chunk',
+                   //id: config.id + '-chunk',
                    anchor: '99%',
                    allowBlank: true,
                    editable: true
@@ -150,7 +177,7 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
                    xtype: 'textfield',
                    fieldLabel: _('simplemodal_item_resource'),
                    name: 'resource',
-                   id: config.id + '-resource',
+                   //id: config.id + '-resource',
                    anchor: '99%',
                    allowBlank: true,
                    editable: true
@@ -197,26 +224,22 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
         	xtype: 'xcheckbox',
         	boxLabel: _('simplemodal_item_active'),
         	name: 'active',
-        	id: config.id + '-active',
+        	//id: config.id + '-active',
         	checked: true
         });
 
         return items;
     }
 
-    , showRecipient: function (cb, rec, i) {
+    ,showRecipient: function(cb,rec,i) {
         var form = this.fp.getForm();
-        for (var x = 0; x < this.tps.length; x++) {
-            var f = form.findField('mc-recipient-' + this.tps[x]);
-            if (f) {
-                this.hideField(f);
-            }
+        for (var x=0;x<this.tps.length;x++) {
+            var f = form.findField('mc-recipient-'+this.tps[x]);
+            if (f) { this.hideField(f); }
         }
         var type = rec ? rec.data.type : 'user';
-        var fd = form.findField('mc-recipient-' + type);
-        if (fd) {
-            this.showField(fd);
-        }
+        var fd = form.findField('mc-recipient-'+type);
+        if (fd) { this.showField(fd);}
     }
 
 });

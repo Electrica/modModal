@@ -43,6 +43,7 @@ $_lang['simplemodal_grid_actions'] = 'Действия';
 $_lang['simplemodal_recipient_type'] = 'Тип получателя';
 $_lang['simplemodal_create_user'] = 'Пользователь';
 $_lang['simplemodal_create_usergroup'] = 'Группа';
+$_lang['simplemodal_create_role'] = 'Роль';
 $_lang['simplemodal_create_all'] = 'Все';
 
 

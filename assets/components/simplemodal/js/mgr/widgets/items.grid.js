@@ -44,18 +44,39 @@ simpleModal.grid.Items = function (config) {
 	}, this);
 };
 Ext.extend(simpleModal.grid.Items, MODx.grid.Grid, {
-	windows: {},
+    windows: {},
 
-	getMenu: function (grid, rowIndex) {
-		var ids = this._getSelectedIds();
+    getMenu: function (grid, rowIndex) {
+        var ids = this._getSelectedIds();
 
-		var row = grid.getStore().getAt(rowIndex);
-		var menu = simpleModal.utils.getMenu(row.data['actions'], this, ids);
+        var row = grid.getStore().getAt(rowIndex);
+        var menu = simpleModal.utils.getMenu(row.data['actions'], this, ids);
 
-		this.addContextMenuItem(menu);
-	},
+        this.addContextMenuItem(menu);
+    },
+
 
 	createItem: function (btn, e) {
+
+        //if (!w) {
+        //    var w = MODx.load({
+        //        xtype: 'simplemodal-item-window-create',
+        //        id: Ext.id(),
+        //        listeners: {
+        //            success: {
+        //                fn: function () {
+        //                    this.refresh();
+        //                }, scope: this
+        //            }
+        //        }
+        //    });
+        //}
+        //w.reset();
+        //w.setValues({active: true});
+        //w.show(Ext.EventObject.target);
+        //
+        //console.log(w);
+
 		var w = MODx.load({
 			xtype: 'simplemodal-item-window-create',
 			id: Ext.id(),
@@ -70,6 +91,13 @@ Ext.extend(simpleModal.grid.Items, MODx.grid.Grid, {
 		w.reset();
 		w.setValues({active: true});
 		w.show(e.target);
+
+        this.on('hide', function() {
+            var w = this;
+            window.setTimeout(function() {
+                w.close()
+            }, 300);
+        })
 	},
 
 	updateItem: function (btn, e, row) {
