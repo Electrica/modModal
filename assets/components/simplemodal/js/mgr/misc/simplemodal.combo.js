@@ -49,6 +49,78 @@ Ext.extend(simpleModal.combo.Resource,MODx.combo.ComboBox);
 Ext.reg('simplemodal-combo-resource',simpleModal.combo.Resource);
 
 
+simpleModal.combo.Users = function(config) {
+    Ext.applyIf(config,{
+        allowBlank:true,
+        msgTarget: 'under',
+        allowAddNewData: true,
+        xtype:'superboxselect',
+        resizable: true,
+        name: 'users',
+        anchor:'100%',
+        triggerAction: 'all',
+        store: new Ext.data.SimpleStore({
+            fields: ['id', 'user'],
+            data: [['1','Gropu1'],['2','Gropu2'],['3','Gropu3'],['4','Gropu4']]
+        }),
+        mode: 'local',
+        displayField: 'user',
+        valueField: 'id',
+        value: '',
+        extraItemCls: 'x-tag',
+        listeners: {
+            newitem: function(bs,v){
+                var newObj = {
+                    id: v,
+                    group: v
+                };
+                bs.addItem(newObj);
+            }
+        }
+
+    });
+    simpleModal.combo.Users.superclass.constructor.call(this,config);
+};
+Ext.extend(simpleModal.combo.Users,Ext.ux.form.SuperBoxSelect);
+Ext.reg('simplemodal-combo-users',simpleModal.combo.Users);
+
+
+simpleModal.combo.Groups = function(config) {
+    Ext.applyIf(config,{
+        allowBlank:true,
+        msgTarget: 'under',
+        allowAddNewData: true,
+        xtype:'superboxselect',
+        resizable: true,
+        name: 'groups',
+        anchor:'100%',
+        triggerAction: 'all',
+        store: new Ext.data.SimpleStore({
+            fields: ['id', 'group'],
+            data: [['1','Gropu1'],['2','Gropu2'],['3','Gropu3'],['4','Gropu4']]
+        }),
+        mode: 'local',
+        displayField: 'group',
+        valueField: 'id',
+        value: '',
+        extraItemCls: 'x-tag',
+        listeners: {
+            newitem: function(bs,v){
+                var newObj = {
+                    id: v,
+                    group: v
+                };
+                bs.addItem(newObj);
+            }
+        }
+
+    });
+    simpleModal.combo.Groups.superclass.constructor.call(this,config);
+};
+Ext.extend(simpleModal.combo.Groups,Ext.ux.form.SuperBoxSelect);
+Ext.reg('simplemodal-combo-groups',simpleModal.combo.Groups);
+
+
 //MODx.combo.Resources = function(config) {
 //    config = config || {};
 //    Ext.applyIf(config,{

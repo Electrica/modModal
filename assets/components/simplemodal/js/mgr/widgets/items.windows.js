@@ -18,102 +18,19 @@ simpleModal.window.CreateItem = function (config) {
         //}]
     });
     simpleModal.window.CreateItem.superclass.constructor.call(this, config);
-    this.on('show', function () {
-        this.fp.getForm().findField('type').fireEvent('select');
-    }, this);
 };
+
 Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
 
-    tps: ['user','usergroup','role','all']
+    getFields: function () {
 
-    , getFields: function () {
-
-        //var data = [];
-        //data.push(['user', _('simplemodal_create_user')]);
-        //data.push(['usergroup', _('simplemodal_create_usergroup')]);
-        //data.push(['all', _('simplemodal_create_all')]);
-
-        //var items = [{
-        //    xtype: 'combo'
-        //    , fieldLabel: _('simplemodal_recipient_type')
-        //    , name: 'type'
-        //    , hiddenName: 'type'
-        //    , store: new Ext.data.SimpleStore({
-        //        fields: ['type', 'disp']
-        //        , data: data
-        //    })
-        //    , mode: 'local'
-        //    , triggerAction: 'all'
-        //    , displayField: 'disp'
-        //    , valueField: 'type'
-        //    , editable: false
-        //    , value: data[0][0]
-        //    , listeners: {
-        //        'select': {fn: this.showRecipient, scope: this}
-        //    }
-        //    , anchor: '100%'
-        //}];
-
-        var data = [];
-        data.push(['user',_('simplemodal_create_user')]);
-        data.push(['usergroup',_('simplemodal_create_usergroup')]);
-        data.push(['role',_('simplemodal_create_role')]);
-        data.push(['all',_('simplemodal_create_all')]);
-
-        var items = [{
-            xtype: 'combo'
-            ,fieldLabel: _('simplemodal_recipient_type')
-            ,name: 'type'
-            ,hiddenName: 'type'
-            ,store: new Ext.data.SimpleStore({
-                fields: ['type','disp']
-                ,data: data
-            })
-            ,mode: 'local'
-            ,triggerAction: 'all'
-            ,displayField: 'disp'
-            ,valueField: 'type'
-            ,editable: false
-            ,value: data[0][0]
-            ,listeners: {
-                'select': {fn:this.showRecipient,scope:this}
-            }
-            ,anchor: '100%'
-        }];
-
-       items.push({
-            xtype: 'modx-combo-user'
-           , name: 'user'
-            , id: 'mc-recipient-user'
-            , fieldLabel: _('simplemodal_item_user')
-            , allowBlank: false
-            , anchor: '100%'
-        });
-
-       items.push({
-            xtype: 'modx-combo-usergroup'
-           , name: 'group'
-            , id: 'mc-recipient-usergroup'
-            , fieldLabel: _('simplemodal_item_usergroup')
-            , allowBlank: false
-            , anchor: '100%'
-        });
-
-        items.push({
-            xtype: 'hidden'
-            , id: 'mc-recipient-all'
-            , name: 'all'
-            , fieldLabel: _('all')
-            , value: 'all'
-        });
-
-       items.push({
+       return [{
         	xtype: 'textfield',
         	fieldLabel: _('simplemodal_item_name'),
         	name: 'name',
         	//id: config.id + '-name',
         	anchor: '99%',
-        	allowBlank: false,
+        	allowBlank: false
         }, {
         	xtype: 'textarea',
         	fieldLabel: _('simplemodal_item_description'),
@@ -183,63 +100,51 @@ Ext.extend(simpleModal.window.CreateItem, MODx.Window, {
                    editable: true
                }]
            }]
-        },{
-           //layout:'column'
-           //,border: false
-           //,anchor: '100%',
-           //items: [{
-           //    columnWidth: .5,
-           //    layout: 'form'
-           //    ,defaults: { msgTarget: 'under' }
-           //    ,border:false,
-           //    items: [{
-           //        xtype: 'modx-combo-user',
-           //        fieldLabel: _('simplemodal_item_user'),
-           //        name: 'user',
-           //        id: config.id + '-user',
-           //        anchor: '99%',
-           //        editable: true
-           //    }]
-           //},{
-           //    columnWidth: .5
-           //    ,layout: 'form'
-           //    ,defaults: { msgTarget: 'under' }
-           //    ,border:false,
-           //    items: [{
-           //        columnWidth: .5
-           //        ,layout: 'form'
-           //        ,defaults: { msgTarget: 'under' }
-           //        ,border:false,
-           //        items: [{
-           //            xtype: 'modx-combo-usergroup',
-           //            fieldLabel: _('simplemodal_item_usergroup'),
-           //            name: 'group',
-           //            id: config.id + '-group',
-           //            anchor: '99%',
-           //            editable: true
-           //        }]
-           //    }]
-           //}]
         }, {
+           layout: 'column'
+           , border: false
+           , anchor: '100%',
+           items: [{
+               columnWidth: .5,
+               layout: 'form'
+               , defaults: {msgTarget: 'under'}
+               , border: false,
+               items: [{
+                   //xtype: 'modx-combo-user',
+                   xtype: 'modx-combo-user',
+                   fieldLabel: _('simplemodal_item_user'),
+                   name: 'user',
+                   editable: true,
+                   anchor: '99%',
+                   renderTo: Ext.getBody()
+               }]
+           }, {
+               columnWidth: .5
+               , layout: 'form'
+               , defaults: {msgTarget: 'under'}
+               , border: false,
+               items: [{
+                   columnWidth: .5
+                   , layout: 'form'
+                   , defaults: {msgTarget: 'under'}
+                   , border: false,
+                   items: [{
+                       xtype: 'modx-combo-usergroup',
+                       fieldLabel: _('simplemodal_item_usergroup'),
+                       name: 'group',
+                       anchor: '99%',
+                       editable: true
+                   }]
+               }]
+           }]
+       },{
         	xtype: 'xcheckbox',
         	boxLabel: _('simplemodal_item_active'),
         	name: 'active',
         	//id: config.id + '-active',
         	checked: true
-        });
+        }];
 
-        return items;
-    }
-
-    ,showRecipient: function(cb,rec,i) {
-        var form = this.fp.getForm();
-        for (var x=0;x<this.tps.length;x++) {
-            var f = form.findField('mc-recipient-'+this.tps[x]);
-            if (f) { this.hideField(f); }
-        }
-        var type = rec ? rec.data.type : 'user';
-        var fd = form.findField('mc-recipient-'+type);
-        if (fd) { this.showField(fd);}
     }
 
 });
